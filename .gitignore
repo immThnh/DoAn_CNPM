@@ -1,0 +1,8 @@
+.vs/
+DoAn/bin/
+DoAn/obj/
+.vs/DoAn/v17/.suo
+ DoAn/obj/*
+DoAn/bin/*
+BLL/obj/Debug/
+DAL/obj/Debug/
