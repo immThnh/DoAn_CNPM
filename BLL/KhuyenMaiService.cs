@@ -55,10 +55,6 @@ namespace BLL
                 khuyenMai.ID = id;
                 dbContext.KhuyenMais.Add(khuyenMai);
             }
-            else
-            {
-
-            }
             khuyenMai.Ten = ten;
             khuyenMai.GiamGia = giamGia;
             khuyenMai.NoiDung = noiDung;

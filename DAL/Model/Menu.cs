@@ -24,5 +24,10 @@ namespace DAL.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MonAn> MonAns { get; set; }
+
+        public override string ToString()
+        {
+            return LoaiMenu;
+        }
     }
 }

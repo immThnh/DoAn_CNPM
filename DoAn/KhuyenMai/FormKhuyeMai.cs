@@ -190,10 +190,5 @@ namespace DoAn
             }
         }
 
-        private void timKiêmToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormTimKiemKhuyenMai form = new FormTimKiemKhuyenMai();
-            form.Show();
-        }
     }
 }

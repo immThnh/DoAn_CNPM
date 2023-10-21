@@ -109,7 +109,7 @@ namespace DoAn
         private void bindGridHoaDon(List<MonAnInHoaDon> list)
         {
             dataGridView2.Rows.Clear();
-            
+            tongTienThanhToan = 0;
             foreach (var i in list)
             {
                 int index = dataGridView2.Rows.Add();
@@ -259,7 +259,7 @@ namespace DoAn
             {
                 if (hoaDonService.LuuHoaDon(DateTime.Now, monAnsInHoaDons))
                 {
-                    MessageBox.Show("Lưu thông tin hóa đơn thành công!");
+                    MessageBox.Show("Thanh toán hóa đơn thành công!");
                     monAnsInHoaDons = new List<MonAnInHoaDon>();
                     dataGridView2.Rows.Clear();
                     tongTienThanhToan = 0;
@@ -268,7 +268,7 @@ namespace DoAn
                 }
                 else
                 {
-                    MessageBox.Show("Lưu thông tin thất bại!");
+                    MessageBox.Show("Thanh toán thất bại!");
                 }
             }
         }
@@ -328,6 +328,7 @@ namespace DoAn
                 unCheckedAllDGV();
             }
         }
-       
+
+        
     }
 }

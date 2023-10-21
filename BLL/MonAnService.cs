@@ -39,9 +39,9 @@ namespace BLL
                     {
                         m.KhuyenMai.MonAns.Remove(m);
                     }
-                    if(m.ChiTietHoaDons != null)
+                    if (m.ChiTietHoaDons != null)
                     {
-                        context.ChiTietHoaDons.RemoveRange(m.ChiTietHoaDons);
+                       context.ChiTietHoaDons.RemoveRange(m.ChiTietHoaDons);
                     }
 
                     context.MonAns.Remove(m);
@@ -98,6 +98,7 @@ namespace BLL
                     ID = maMonAn,
                     IDMenu = idMenu,
                     Ten = tenMonAn,
+                    GiaSauGiam = donGia,
                     Menu = menu,
                     GiaGoc = donGia
                 };
@@ -119,7 +120,7 @@ namespace BLL
                 if (existingMonAn.IDKhuyenMai != null)
                 {
                     double tiLe = existingMonAn.KhuyenMai.GiamGia / 100.0;
-                    existingMonAn.GiaGoc = Math.Round(existingMonAn.GiaGoc - (existingMonAn.GiaGoc * tiLe));
+                    existingMonAn.GiaSauGiam = Math.Round(donGia - (donGia * tiLe));
                 }
                 existingMonAn.Anh = duongDanAnh;
             }

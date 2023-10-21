@@ -104,12 +104,6 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="KhuyenMai\FormTimKiemKhuyenMai.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KhuyenMai\FormTimKiemKhuyenMai.Designer.cs">
-      <DependentUpon>FormTimKiemKhuyenMai.cs</DependentUpon>
-    </Compile>
     <Compile Include="MonAns\FrmMonAn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,9 +128,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KhuyenMai\FormTimKiemKhuyenMai.resx">
-      <DependentUpon>FormTimKiemKhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MonAns\FrmMonAn.resx">
       <DependentUpon>FrmMonAn.cs</DependentUpon>
