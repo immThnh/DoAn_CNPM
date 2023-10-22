@@ -25,6 +25,8 @@ namespace DoAn
             return thoiGian.ToString("dd/MM/yyyy"); // Định dạng ngày/tháng/năm
         }
 
+       
+
         public async Task<List<MonAnReport>> getListByTime(DateTime time)
         {
             DoAnModels model = new DoAnModels();
@@ -54,7 +56,7 @@ namespace DoAn
                     if (i == chiTiet.HoaDon.NgayThanhToan.Month  && chiTiet.HoaDon.NgayThanhToan.Year == time.Year)
                     {
                          monAnReport.tongTien += chiTiet.HoaDon.TongTien;
-                        monAnReport.tongChi = giaGocMonAn;
+                         monAnReport.tongChi += chiTiet.MonAn.GiaGoc * chiTiet.SoLuong;
                     }
                     else
                     {

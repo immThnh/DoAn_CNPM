@@ -40,7 +40,7 @@ namespace DoAn
             formKhuyeMai.Show();
         }
 
-        private void openChilrenForm(Form childForm)
+        public void openChilrenForm(Form childForm)
         {
             if(currentForm != null)
             {
@@ -94,17 +94,29 @@ namespace DoAn
             BaoCaoDoanhThu baocao = new BaoCaoDoanhThu();
             openChilrenForm(baocao);
         }
-
-
-
-
-
         #endregion
 
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            // mở trang chủ
+            if (currentForm != null)
+            {
+                currentForm.Close();
+            }
+            pMid.AutoScroll = true;
+            pMid.AutoSize = true;
+            pMid.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            pMid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(59)))), ((int)(((byte)(54)))));
+            pMid.BackgroundImage = global::DoAn.Properties.Resources.backgournd;
+            pMid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            pMid.Controls.Add(this.label4);
+            pMid.Controls.Add(this.label3);
+            pMid.Controls.Add(this.btnXoaHoaDon);
+            pMid.Dock = System.Windows.Forms.DockStyle.Fill;
+            pMid.Location = new System.Drawing.Point(0, 67);
+            pMid.Name = "pMid";
+            pMid.Size = new System.Drawing.Size(1589, 736);
+            pMid.TabIndex = 3;
         }
 
         private void btnGoiMon_Click(object sender, EventArgs e)
@@ -122,6 +134,17 @@ namespace DoAn
         private void btnQLMA_Click(object sender, EventArgs e)
         {
             FrmMonAn form = new FrmMonAn();
+            openChilrenForm(form);
+        }
+
+        private void btnTK_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoaHoaDon_Click(object sender, EventArgs e)
+        {
+            FrmGoiMons form = new FrmGoiMons();
             openChilrenForm(form);
         }
     }
