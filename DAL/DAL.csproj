@@ -70,7 +70,6 @@
   <ItemGroup>
     <Compile Include="DAL.cs" />
     <Compile Include="DTO\MonAnInHoaDon.cs" />
-    <Compile Include="DTO\MonAnReport.cs" />
     <Compile Include="KhuyenMaiDAL.cs" />
     <Compile Include="MenuDAL.cs" />
     <Compile Include="Model\ChiTietHoaDon.cs" />

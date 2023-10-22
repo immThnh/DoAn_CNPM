@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -25,7 +26,6 @@ namespace DoAn
         private List<MonAnInHoaDon> monAnsInHoaDons = new List<MonAnInHoaDon>();
         private HoaDonService hoaDonService = new HoaDonService();
         private Form currentForm;
-        private bool isAddingOrRemoving = false;
         private List<int> soLuongs = new List<int>();
 
         private List<MonAn> monAns = new List<MonAn>();
@@ -50,13 +50,6 @@ namespace DoAn
             lTime.Text = DateTime.Now.ToString("dddd, MM - yyyy");
             render();
         }
-
-        private string getDuongDan(string relativePath)
-        {
-            string duongDanToiProj = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\"));
-            return Path.Combine(duongDanToiProj, relativePath);
-        }
-
         private void render()
         {
             monAns = monAnService.getAll();
@@ -77,6 +70,14 @@ namespace DoAn
                 dataGridView1.Rows[index].Cells[4].Value = ChuyenDoiSangTien(item.GiaSauGiam);
             }
         }
+
+        private string getDuongDan(string relativePath)
+        {
+            string duongDanToiProj = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\"));
+            return Path.Combine(duongDanToiProj, relativePath);
+        }
+
+        
 
         private void bindGridMonAn(List<MonAn> monAns)
         {
@@ -127,6 +128,7 @@ namespace DoAn
             MonAnInHoaDon m1 = new MonAnInHoaDon();
             m1.MonAn = m;
             m1.SoLuong = 1;
+            m1.TenMonAn = m.Ten;
             m1.TongTien = m1.SoLuong * m1.MonAn.GiaSauGiam;
             return m1;
         }
@@ -329,5 +331,11 @@ namespace DoAn
         }
 
         
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmInHoaDon form = new FrmInHoaDon(monAnsInHoaDons);
+            form.Show();
+
+        }
     }
 }

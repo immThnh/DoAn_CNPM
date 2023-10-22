@@ -37,6 +37,7 @@ namespace DoAn
             this.btnGoiMon = new System.Windows.Forms.Button();
             this.pTop = new System.Windows.Forms.Panel();
             this.btnQLMA = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnKM = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,11 +46,10 @@ namespace DoAn
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnXoaHoaDon = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pTop.SuspendLayout();
-            this.pMid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pMid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +83,7 @@ namespace DoAn
             this.btnGoiMon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGoiMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGoiMon.ForeColor = System.Drawing.Color.White;
-            this.btnGoiMon.Location = new System.Drawing.Point(486, 3);
+            this.btnGoiMon.Location = new System.Drawing.Point(489, 3);
             this.btnGoiMon.Name = "btnGoiMon";
             this.btnGoiMon.Size = new System.Drawing.Size(160, 60);
             this.btnGoiMon.TabIndex = 0;
@@ -126,6 +126,19 @@ namespace DoAn
             this.btnQLMA.Click += new System.EventHandler(this.btnQLMA_Click);
             this.btnQLMA.MouseEnter += new System.EventHandler(this.btnKM_MouseEnter);
             this.btnQLMA.MouseLeave += new System.EventHandler(this.btnKM_MouseLeave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::DoAn.Properties.Resources.logo1;
+            this.pictureBox1.Location = new System.Drawing.Point(322, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(160, 70);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnKM
             // 
@@ -204,12 +217,11 @@ namespace DoAn
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(664, 299);
+            this.label4.Location = new System.Drawing.Point(660, 299);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(245, 36);
             this.label4.TabIndex = 92;
@@ -217,12 +229,11 @@ namespace DoAn
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(528, 209);
+            this.label3.Location = new System.Drawing.Point(524, 209);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(505, 72);
             this.label3.TabIndex = 91;
@@ -230,33 +241,19 @@ namespace DoAn
             // 
             // btnXoaHoaDon
             // 
-            this.btnXoaHoaDon.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnXoaHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(82)))));
             this.btnXoaHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoaHoaDon.FlatAppearance.BorderSize = 0;
             this.btnXoaHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoaHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaHoaDon.ForeColor = System.Drawing.Color.White;
-            this.btnXoaHoaDon.Location = new System.Drawing.Point(675, 360);
+            this.btnXoaHoaDon.Location = new System.Drawing.Point(671, 360);
             this.btnXoaHoaDon.Name = "btnXoaHoaDon";
             this.btnXoaHoaDon.Size = new System.Drawing.Size(225, 71);
             this.btnXoaHoaDon.TabIndex = 90;
             this.btnXoaHoaDon.Text = "ĐẶT MÓN MGAY";
             this.btnXoaHoaDon.UseVisualStyleBackColor = false;
             this.btnXoaHoaDon.Click += new System.EventHandler(this.btnXoaHoaDon_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::DoAn.Properties.Resources.logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(322, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(160, 70);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -281,9 +278,9 @@ namespace DoAn
             this.Text = "NHÀ HÀNG DOLA";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.pTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pMid.ResumeLayout(false);
             this.pMid.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
