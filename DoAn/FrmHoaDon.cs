@@ -16,6 +16,7 @@ namespace DoAn
     {
         private readonly HoaDonService hoaDonService = new HoaDonService();
         private List<HoaDon> hoaDons= new List<HoaDon>();
+        private double tongDoanhThu = 0;
         public FrmHoaDon()
         {
             InitializeComponent();
@@ -27,12 +28,12 @@ namespace DoAn
         public void XuatDanhSach(List<HoaDon> list)
         {
             dgvHD.Rows.Clear();
-
+            tongDoanhThu = 0;
             foreach (var item in list)
             {
                 int index = dgvHD.Rows.Add(item);
                 dgvHD.Rows[index].Cells[0].Value = item.ID;
-                dgvHD.Rows[index].Cells[1].Value = item.NgayThanhToan.ToString("hh:mm:ss tt dd/MM/yyyy"); ;
+                dgvHD.Rows[index].Cells[1].Value = item.NgayThanhToan.ToString("hh:mm tt dd/MM/yyyy"); ;
 
                 DataGridViewComboBoxCell cell = new DataGridViewComboBoxCell();
                 cell.DataSource = item.ChiTietHoaDons.ToList();
@@ -47,7 +48,9 @@ namespace DoAn
                 }
 
                 dgvHD.Rows[index].Cells[3].Value = ChuyenDoiSangTien(item.TongTien);
+                tongDoanhThu += item.TongTien;
             }
+            txtTongDoanhThu.Text = ChuyenDoiSangTien(tongDoanhThu);
         }
         private string ChuyenDoiSangTien(double money)
         {
@@ -96,10 +99,7 @@ namespace DoAn
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dgvHD.Rows.Count; i++)
-            {
-                dgvHD.Rows[i].Visible = true;
-            }
+            XuatDanhSach(hoaDons);
         }
 
         private void btnXoaHoaDon_Click(object sender, EventArgs e)
@@ -118,6 +118,22 @@ namespace DoAn
             MessageBox.Show("XÓA THÀNH CÔNG!");
             hoaDons = hoaDonService.getALL();
             XuatDanhSach(hoaDons);
+        }
+
+        private void ThongKeTheoThang(int thang)
+        {
+            List<HoaDon> result = hoaDons.Where(h => h.NgayThanhToan.Month == thang).ToList();
+            XuatDanhSach(result);
+        }
+
+        private void cbbThongKeTheoThang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbbThongKeTheoThang.SelectedIndex < 0)
+            {
+                return;
+            }
+            int index = cbbThongKeTheoThang.SelectedIndex + 1;
+            ThongKeTheoThang(index);
         }
     }
 }

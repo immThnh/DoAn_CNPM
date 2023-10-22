@@ -1,7 +1,6 @@
 ﻿using BLL;
 using DAL.DTO;
 using DAL.Model;
-using DoAn.BaoCao;
 using DoAn.MonAns;
 using System;
 using System.Collections.Generic;
@@ -61,13 +60,6 @@ namespace DoAn
            
         }
 
-
-
-        private void thôngKêToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            BaoCaoDoanhThu baoCao = new BaoCaoDoanhThu();
-            openChilrenForm(baoCao);
-        }
         private void btnKM_Click(object sender, EventArgs e)
         {
             FormKhuyeMai khuyeMai = new FormKhuyeMai();
@@ -89,13 +81,8 @@ namespace DoAn
 
         }
 
-        private void btnBC_Click(object sender, EventArgs e)
-        {
-            BaoCaoDoanhThu baocao = new BaoCaoDoanhThu();
-            openChilrenForm(baocao);
-        }
+       
         #endregion
-
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {

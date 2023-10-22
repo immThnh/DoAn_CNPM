@@ -1,7 +1,6 @@
 ﻿using BLL;
 using DAL.DTO;
 using DAL.Model;
-using DoAn.BaoCao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
