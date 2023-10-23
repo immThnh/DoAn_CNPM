@@ -261,7 +261,7 @@ namespace DoAn
                 if (hoaDonService.LuuHoaDon(DateTime.Now, monAnsInHoaDons))
                 {
                     MessageBox.Show("Thanh toán hóa đơn thành công!");
-                    monAnsInHoaDons = new List<MonAnInHoaDon>();
+                    //monAnsInHoaDons = new List<MonAnInHoaDon>();
                     //dataGridView2.Rows.Clear();
                     //tongTienThanhToan = 0;
                     //txtTongTien.Text = "";
