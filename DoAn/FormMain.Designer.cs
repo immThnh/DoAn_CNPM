@@ -63,9 +63,10 @@ namespace DoAn
             this.btnHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHD.ForeColor = System.Drawing.Color.White;
-            this.btnHD.Location = new System.Drawing.Point(866, 3);
+            this.btnHD.Location = new System.Drawing.Point(631, 2);
+            this.btnHD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHD.Name = "btnHD";
-            this.btnHD.Size = new System.Drawing.Size(160, 60);
+            this.btnHD.Size = new System.Drawing.Size(120, 49);
             this.btnHD.TabIndex = 1;
             this.btnHD.Text = "THỐNG KẾ";
             this.btnHD.UseVisualStyleBackColor = false;
@@ -83,9 +84,10 @@ namespace DoAn
             this.btnGoiMon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGoiMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGoiMon.ForeColor = System.Drawing.Color.White;
-            this.btnGoiMon.Location = new System.Drawing.Point(489, 3);
+            this.btnGoiMon.Location = new System.Drawing.Point(348, 2);
+            this.btnGoiMon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGoiMon.Name = "btnGoiMon";
-            this.btnGoiMon.Size = new System.Drawing.Size(160, 60);
+            this.btnGoiMon.Size = new System.Drawing.Size(120, 49);
             this.btnGoiMon.TabIndex = 0;
             this.btnGoiMon.Text = "GỌI MÓN";
             this.btnGoiMon.UseVisualStyleBackColor = false;
@@ -103,8 +105,9 @@ namespace DoAn
             this.pTop.Controls.Add(this.btnHD);
             this.pTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pTop.Location = new System.Drawing.Point(0, 0);
+            this.pTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pTop.Name = "pTop";
-            this.pTop.Size = new System.Drawing.Size(1589, 67);
+            this.pTop.Size = new System.Drawing.Size(1155, 54);
             this.pTop.TabIndex = 2;
             // 
             // btnQLMA
@@ -117,9 +120,10 @@ namespace DoAn
             this.btnQLMA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLMA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLMA.ForeColor = System.Drawing.Color.White;
-            this.btnQLMA.Location = new System.Drawing.Point(656, 4);
+            this.btnQLMA.Location = new System.Drawing.Point(473, 3);
+            this.btnQLMA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnQLMA.Name = "btnQLMA";
-            this.btnQLMA.Size = new System.Drawing.Size(204, 60);
+            this.btnQLMA.Size = new System.Drawing.Size(153, 49);
             this.btnQLMA.TabIndex = 6;
             this.btnQLMA.Text = "QUẢN LÝ MÓN ĂN";
             this.btnQLMA.UseVisualStyleBackColor = false;
@@ -132,9 +136,10 @@ namespace DoAn
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::DoAn.Properties.Resources.logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(322, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(223, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(160, 70);
+            this.pictureBox1.Size = new System.Drawing.Size(120, 57);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -150,9 +155,10 @@ namespace DoAn
             this.btnKM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKM.ForeColor = System.Drawing.Color.White;
-            this.btnKM.Location = new System.Drawing.Point(1017, 5);
+            this.btnKM.Location = new System.Drawing.Point(744, 2);
+            this.btnKM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnKM.Name = "btnKM";
-            this.btnKM.Size = new System.Drawing.Size(160, 60);
+            this.btnKM.Size = new System.Drawing.Size(120, 49);
             this.btnKM.TabIndex = 4;
             this.btnKM.Text = "KHUYẾN MÃI";
             this.btnKM.UseVisualStyleBackColor = false;
@@ -210,9 +216,10 @@ namespace DoAn
             this.pMid.Controls.Add(this.label3);
             this.pMid.Controls.Add(this.btnXoaHoaDon);
             this.pMid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pMid.Location = new System.Drawing.Point(0, 67);
+            this.pMid.Location = new System.Drawing.Point(0, 54);
+            this.pMid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pMid.Name = "pMid";
-            this.pMid.Size = new System.Drawing.Size(1589, 736);
+            this.pMid.Size = new System.Drawing.Size(1155, 598);
             this.pMid.TabIndex = 3;
             // 
             // label4
@@ -221,9 +228,10 @@ namespace DoAn
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(660, 299);
+            this.label4.Location = new System.Drawing.Point(495, 243);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(245, 36);
+            this.label4.Size = new System.Drawing.Size(199, 29);
             this.label4.TabIndex = 92;
             this.label4.Text = "Món ăn đa dạng";
             // 
@@ -233,9 +241,10 @@ namespace DoAn
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(524, 209);
+            this.label3.Location = new System.Drawing.Point(393, 170);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(505, 72);
+            this.label3.Size = new System.Drawing.Size(411, 57);
             this.label3.TabIndex = 91;
             this.label3.Text = "4TL RESTUARANT";
             // 
@@ -247,9 +256,10 @@ namespace DoAn
             this.btnXoaHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoaHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaHoaDon.ForeColor = System.Drawing.Color.White;
-            this.btnXoaHoaDon.Location = new System.Drawing.Point(671, 360);
+            this.btnXoaHoaDon.Location = new System.Drawing.Point(503, 292);
+            this.btnXoaHoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnXoaHoaDon.Name = "btnXoaHoaDon";
-            this.btnXoaHoaDon.Size = new System.Drawing.Size(225, 71);
+            this.btnXoaHoaDon.Size = new System.Drawing.Size(169, 58);
             this.btnXoaHoaDon.TabIndex = 90;
             this.btnXoaHoaDon.Text = "ĐẶT MÓN MGAY";
             this.btnXoaHoaDon.UseVisualStyleBackColor = false;
@@ -269,11 +279,12 @@ namespace DoAn
             // FormMain
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1589, 803);
+            this.ClientSize = new System.Drawing.Size(1155, 652);
             this.Controls.Add(this.pMid);
             this.Controls.Add(this.pTop);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormMain";
             this.Text = "NHÀ HÀNG DOLA";
             this.Load += new System.EventHandler(this.FormMain_Load);
