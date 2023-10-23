@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -35,7 +36,28 @@ namespace DoAn.MonAns
             Dulieu(listMenu);
          
         }
-        
+
+        private string ChuyenDoiSangTien(double money)
+        {
+            return string.Format("{0:N0} VNĐ", money);
+        }
+
+        private double ChuyenDoiSangSo(string tien)
+        {
+            string chiSo = Regex.Replace(tien, @"[^0-9.,]+", "");
+
+            chiSo = chiSo.Replace(",", "");
+
+            double soTien;
+            if (double.TryParse(chiSo, out soTien))
+            {
+                return soTien;
+            }
+          
+                return 0; 
+        }
+
+
         public void Dulieu(List<DAL.Model.Menu> listmenu)
         {
             this.cbThucDon.DataSource = listmenu;
@@ -54,8 +76,8 @@ namespace DoAn.MonAns
                 dgvDS.Rows[index].Cells[0].Value = item.ID;
                 dgvDS.Rows[index].Cells[1].Value = item.Ten;
                 dgvDS.Rows[index].Cells[2].Value = item.Menu.LoaiMenu;
-                dgvDS.Rows[index].Cells[3].Value = item.GiaGoc;
-                dgvDS.Rows[index].Cells[4].Value = item.GiaSauGiam;
+                dgvDS.Rows[index].Cells[3].Value = ChuyenDoiSangTien(item.GiaGoc);
+                dgvDS.Rows[index].Cells[4].Value = ChuyenDoiSangTien(item.GiaSauGiam);
                 if (item.Anh != null)
                 {
                     if (File.Exists(getDuongDan(item.Anh)))
@@ -87,7 +109,7 @@ namespace DoAn.MonAns
                 string thuDon = selectedRow.Cells[2].Value.ToString();
                 int monAnId = Convert.ToInt32(selectedRow.Cells[0].Value);
                 string tenMonAn = selectedRow.Cells[1].Value.ToString();
-                decimal donGia = Convert.ToDecimal(selectedRow.Cells[3].Value);
+                double donGia = ChuyenDoiSangSo(selectedRow.Cells[3].Value.ToString());
 
 
                 if (selectedRow.Cells[5].Value != null)

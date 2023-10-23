@@ -118,7 +118,7 @@ namespace DoAn
                 dataGridView2.Rows[index].Cells[1].Value = i.SoLuong.ToString();
 
                 tongTienThanhToan += i.TongTien;
-                dataGridView2.Rows[index].Cells[2].Value = i.TongTien;
+                dataGridView2.Rows[index].Cells[2].Value = ChuyenDoiSangTien(i.TongTien);
             }
             txtTongTien.Text = ChuyenDoiSangTien(tongTienThanhToan);
         }
@@ -236,7 +236,7 @@ namespace DoAn
             int rowIndex = dataGridView2.CurrentCell.RowIndex;
             ComboBox comboBox = (ComboBox)sender;
             int soLuong = int.Parse(comboBox.SelectedItem.ToString());
-            dataGridView2.Rows[rowIndex].Cells[2].Value = capNhatSoLuong(dataGridView2.Rows[rowIndex].Cells[0].Value.ToString(), soLuong);
+            dataGridView2.Rows[rowIndex].Cells[2].Value = ChuyenDoiSangTien(capNhatSoLuong(dataGridView2.Rows[rowIndex].Cells[0].Value.ToString(), soLuong));
         }
         #endregion
 
@@ -262,10 +262,10 @@ namespace DoAn
                 {
                     MessageBox.Show("Thanh toán hóa đơn thành công!");
                     monAnsInHoaDons = new List<MonAnInHoaDon>();
-                    dataGridView2.Rows.Clear();
-                    tongTienThanhToan = 0;
-                    txtTongTien.Text = "";
-                    unCheckedAllDGV();
+                    //dataGridView2.Rows.Clear();
+                    //tongTienThanhToan = 0;
+                    //txtTongTien.Text = "";
+                    //unCheckedAllDGV();
                 }
                 else
                 {
@@ -308,8 +308,6 @@ namespace DoAn
 
         }
 
-
-
         private void btnXoaTatCa_Click(object sender, EventArgs e)
         {
             if(monAnsInHoaDons.Count == 0)
@@ -333,9 +331,13 @@ namespace DoAn
         
         private void button1_Click(object sender, EventArgs e)
         {
+            if(monAnsInHoaDons.Count <= 0)
+            {
+                MessageBox.Show("Danh sách gọi món trống!");
+                return;
+            }
             FrmInHoaDon form = new FrmInHoaDon(monAnsInHoaDons);
             form.Show();
-
         }
     }
 }
