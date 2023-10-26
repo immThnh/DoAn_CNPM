@@ -145,6 +145,35 @@ namespace DoAn.MonAns
             }
         }
 
+
+        private bool validateTenMon(string input)
+        {
+            foreach (char c in input)
+            {
+                if (char.IsLetter(c))
+                {
+                    return true; // Tên hợp lệ nếu có ít nhất một ký tự không phải chữ cái
+                }
+            }
+            return false;
+        }
+
+        private bool validateGia(string input)
+        {
+            int intValue;
+            decimal decimalValue;
+
+            if (int.TryParse(input, out intValue) && decimal.TryParse(input, out decimalValue))
+            {
+                if(intValue < 0 || decimalValue < 0)
+                {
+                    return false;
+                }
+                return true; 
+            }
+
+            return false; 
+        }
         private void btnSua_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtTenMonAn.Text) ||
@@ -153,6 +182,20 @@ namespace DoAn.MonAns
             cbThucDon.SelectedValue == null)
             {
                 MessageBox.Show("Vui lòng nhập đủ thông tin!");
+                return;
+            }
+
+            string name = txtTenMonAn.Text;
+            if (!validateTenMon(name))
+            {
+                MessageBox.Show("Tên không hợp lệ!");
+                txtTenMonAn.Text = "";
+                return;
+            }
+            if (!validateGia(txtDonGia.Text))
+            {
+                MessageBox.Show("Giá tiền không hợp lệ");
+                txtDonGia.Text = "";
                 return;
             }
 
@@ -215,10 +258,10 @@ namespace DoAn.MonAns
             }
 
             monAnService.removeList(ids);
-            MessageBox.Show("Xóa thành công!", "Thông Báo", MessageBoxButtons.OK);
 
             var listMonAn = monAnService.getALL();
             XuatDanhSach(listMonAn);
+            MessageBox.Show("Xóa thành công!", "Thông Báo", MessageBoxButtons.OK);
         }
 
         private void label7_Click(object sender, EventArgs e)

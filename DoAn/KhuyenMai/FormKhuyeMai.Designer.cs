@@ -306,6 +306,7 @@ namespace DoAn
             this.tTenKhuyenMai.Name = "tTenKhuyenMai";
             this.tTenKhuyenMai.Size = new System.Drawing.Size(285, 27);
             this.tTenKhuyenMai.TabIndex = 9;
+            this.tTenKhuyenMai.TextChanged += new System.EventHandler(this.tTenKhuyenMai_TextChanged);
             // 
             // label7
             // 

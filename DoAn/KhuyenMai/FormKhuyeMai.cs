@@ -91,6 +91,12 @@ namespace DoAn
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if(!validateTenMon(tTenKhuyenMai.Text))
+            {
+                MessageBox.Show("Tên khuyến mãi không hợp lệ!");
+                tTenKhuyenMai.Text = "";
+                return;
+            }
             List<MonAn> monAns = new List<MonAn>();
             foreach (var i in clbMonAn.CheckedItems)
             {
@@ -190,5 +196,21 @@ namespace DoAn
             }
         }
 
+        private bool validateTenMon(string input)
+        {
+            foreach (char c in input)
+            {
+                if (char.IsLetter(c))
+                {
+                    return true; // Tên hợp lệ nếu có ít nhất một ký tự không phải chữ cái
+                }
+            }
+            return false;
+        }
+
+        private void tTenKhuyenMai_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
